@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+.jobCard {
+  @apply bg-white rounded-2xl border border-slate-200 shadow-sm;
+  @apply p-5 w-full;
+  @apply transition
+}
+.jobCard:hover {
+  @apply shadow-md;
+  transform: translateY(-1px);
+}
+
+
+.cardHeader {
+  @apply flex gap-4;
+}
+
+.progress {
+  @apply w-[84px] flex items-start justify-center;
+}
+
+
+.progressRing {
+  @apply h-[72px] w-[72px] rounded-full border-[6px] border-yellow-400;
+  @apply flex flex-col items-center justify-center;
+}
+
+.progressValue {
+  @apply text-lg font-bold text-slate-900 leading-none;
+}
+
+.progressLabel {
+  @apply text-xs text-slate-600;
+}
+
+.jobinfo {
+  @apply flex-1 min-w-0;
+}
+
+.jobTopRow {
+  @apply flex items-start justify-between gap-3;
+}
+
+.title {
+  @apply text-lg font-semibold text-slate-900 leading-snug;
+}
+
+.jobActions {
+  @apply flex items-center gap-4;
+}
+
+.iconBtn {
+  @apply h-8 w-8 rounded-full border border-slate-200;
+  @apply flex items-center justify-center text-slate-500;
+  @apply hover:bg-slate-50 hover:text-slate-900 transition;
+}
+
+.company {
+  @apply mt-1 flex items-center gap-2 text-sm text-slate-600;
+}
+
+.companyDot {
+  @apply h-2 w-2 rounded-sm bg-blue-500;
+}
+
+.location {
+  @apply mt-1 flex flex-wrap items-center gap-4 text-sm text-slate-500;
+}
+
+.locationItem {
+  @apply flex items-center gap-2;
+}
+
+
+.cardMidlevel {
+  @apply mt-4 flex flex-wrap gap-2;
+}
+
+.jobSpecifications{
+  @apply px-3 py-1 rounded-full ;
+  @apply text-xs font-medium text-slate-700 bg-white;
+}
+
+
+.cardBottom {
+  @apply flex items-center justify-between gap-4;
+}
+
+.posting {
+  @apply flex items-center gap-3;
+}
+
+.timeposted {
+  @apply px-3 py-1 rounded-full bg-violet-100 text-violet-700;
+  @apply text-xs font-medium;
+}
+
+.applicants {
+  @apply text-xs text-slate-500;
+}
+
+.cta {
+  @apply flex items-center gap-3;
+}
+
+.btnSecondary {
+  @apply px-5 py-2 rounded-full border border-slate-200 bg-white;
+  @apply text-sm font-semibold text-slate-700 hover:bg-slate-50 transition;
+}
+
+.btnPrimary {
+  @apply px-5 py-2 rounded-full text-sm font-semibold;
+  @apply bg-lime-300 text-slate-900 hover:bg-lime-200 transition;
+}
+
+
+@media (max-width: 640px) {
+
+  .jobCard {
+    @apply p-4;
+    overflow-x: hidden;
+  }
+
+
+  .cardHeader {
+    @apply flex-col gap-3;
+  }
+
+  .jobinfo {
+    @apply min-w-0; 
+  }
+
+  
+  .title {
+    @apply text-base;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+
+  .jobActions {
+    @apply gap-2;
+  }
+
+  .jobActions svg {
+    @apply h-5 w-5;
+  }
+
+  
+  .location {
+    @apply gap-3;
+  }
+
+  .locationItem {
+    @apply min-w-0;
+  }
+
+  .locationItem p {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+
+  .cardMidlevel {
+    @apply mt-3 gap-2;
+  }
+
+  .jobSpecifications {
+    @apply px-2.5 py-1 text-[11px];
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+
+  .cardBottom {
+    @apply flex-col items-stretch gap-3;
+  }
+
+  .posting {
+    @apply justify-between w-full;
+  }
+
+
+  .buttons {
+    @apply flex flex-col items-stretch gap-2 w-full ;
+  }
+
+  .btnSecondary,
+  .btnPrimary {
+    @apply w-full;
+  }
+}
+

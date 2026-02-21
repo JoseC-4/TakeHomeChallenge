@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+
+.jobDesc {
+  @apply w-full bg-white rounded-2xl;
+  @apply p-5;
+}
+
+
+.jobDesc-topPillRow {
+  @apply mb-3;
+}
+.jobDesc-timePill {
+  @apply inline-flex items-center rounded-full px-3 py-1;
+  @apply text-xs font-medium text-slate-700 bg-slate-100;
+}
+
+
+.jobDesc-top {
+  @apply flex items-start gap-4;
+}
+
+
+.jobDesc-logoWrap {
+  @apply shrink-0;
+}
+.jobDesc-logo {
+  @apply h-14 w-14 rounded-xl bg-slate-100 text-slate-900;
+  @apply flex items-center justify-center font-bold text-xl;
+}
+
+
+.jobDesc-info {
+  @apply flex-1 min-w-0;
+}
+
+.jobDesc-titleRow {
+  @apply flex items-start justify-between gap-3;
+}
+
+.jobDesc-titleBlock {
+  @apply min-w-0;
+}
+
+.jobDesc-title {
+  @apply text-lg font-semibold text-slate-900 leading-snug;
+  @apply truncate;
+}
+
+.jobDesc-companyRow {
+  @apply mt-1 flex items-center gap-2;
+}
+
+.jobDesc-companyDot {
+  @apply h-2 w-2 rounded-sm bg-blue-500;
+}
+
+.jobDesc-company {
+  @apply text-sm text-slate-600 truncate;
+}
+
+
+.jobDesc-metaRow {
+  @apply mt-2 flex flex-wrap items-center gap-3 text-sm text-slate-500;
+}
+
+.jobDesc-metaItem {
+  @apply flex items-center gap-2 min-w-0;
+}
+
+.jobDesc-metaItem p {
+  @apply truncate;
+}
+
+.jobDesc-dot {
+  @apply h-1 w-1 rounded-full bg-slate-300;
+}
+
+.jobDesc-muted {
+  @apply text-slate-400 text-sm;
+}
+
+.jobDesc-actions {
+  @apply flex items-center gap-2;
+}
+
+.jobDesc-iconBtn {
+  @apply h-9 w-9 rounded-full border border-slate-200 bg-white;
+  @apply flex items-center justify-center text-slate-500;
+  @apply hover:bg-slate-50 hover:text-slate-900 transition;
+}
+
+
+.jobDesc-details {
+  @apply mt-4 grid gap-y-3 gap-x-6;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.jobDesc-detailItem {
+  @apply flex items-center gap-2 text-sm text-slate-500 min-w-0;
+}
+
+.jobDesc-detailItem span:last-child {
+  @apply truncate;
+}
+
+.jobDesc-detailIcon {
+  @apply text-slate-400;
+}
+
+
+.jobDesc-match {
+  @apply shrink-0 flex items-start justify-center;
+}
+
+.jobDesc-ring {
+  @apply h-[72px] w-[72px] rounded-full border-[6px] border-lime-400;
+  @apply flex flex-col items-center justify-center;
+}
+
+.jobDesc-ringValue {
+  @apply text-lg font-bold text-slate-900 leading-none;
+}
+
+.jobDesc-ringLabel {
+  @apply text-xs text-slate-600;
+}
+
+
+@media (max-width: 640px) {
+  .jobDesc {
+    @apply p-4;
+  }
+
+  .jobDesc-top {
+    @apply flex-col gap-3;
+  }
+
+  .jobDesc-match {
+    @apply w-full justify-start;
+  }
+
+  .jobDesc-ring {
+    @apply h-[60px] w-[60px] border-[5px];
+  }
+
+  .jobDesc-title {
+    @apply text-base;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .jobDesc-details {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+.companyCard {
+  @apply w-full;
+}
+
+.companySectionTitle {
+  @apply text-sm font-semibold text-slate-900 mb-2;
+}
+
+.companyInner {
+  @apply rounded-2xl border border-slate-200 bg-white p-5 shadow-sm;
+}
+
+.companyHeader {
+  @apply flex items-start gap-4;
+}
+
+.companyLogo {
+  @apply h-14 w-14 rounded-xl bg-slate-200;
+}
+
+.companyHeaderInfo {
+  @apply flex-1 min-w-0;
+}
+
+.companyName {
+  @apply text-base font-semibold text-slate-900;
+}
+
+.companyMetaRow {
+  @apply mt-1 flex flex-wrap items-center gap-2 text-xs text-slate-500;
+}
+
+.companyMetaItem {
+  @apply whitespace-nowrap;
+}
+
+.companyDot {
+  @apply text-slate-300;
+}
+
+.companySocialRow {
+  @apply mt-2 flex items-center gap-2;
+}
+
+.companySocialBtn {
+  @apply inline-flex items-center justify-center;
+  @apply h-8 w-8 rounded-lg border border-slate-200 bg-white;
+  @apply text-xs font-semibold text-slate-700;
+  @apply hover:bg-slate-50 transition;
+}
+
+.companyAbout {
+  @apply mt-4 text-sm text-slate-700 leading-relaxed;
+}

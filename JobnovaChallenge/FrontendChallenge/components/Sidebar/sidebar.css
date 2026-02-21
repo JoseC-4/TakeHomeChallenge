@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.Sidebar {
+  @apply h-screen w-[280px] bg-white  border-slate-200;
+  @apply flex flex-col;
+}
+
+
+.userCard {
+  @apply flex items-center gap-3 px-4 py-4 border-b border-slate-200;
+}
+
+.logoWrap {
+  @apply shrink-0;
+}
+
+.logoCircle {
+  @apply h-10 w-10 rounded-full bg-slate-100 text-slate-700;
+  @apply flex items-center justify-center font-semibold text-sm;
+}
+
+.logoImg {
+  @apply h-10 w-10 rounded-full object-cover;
+}
+
+.cardInfo {
+  @apply min-w-0 flex justify-center;
+}
+
+.orgName {
+  @apply font-semibold text-slate-900 text-xl truncate;
+}
+
+.orgSub {
+  @apply text-slate-500 text-sm truncate;
+}
+
+
+.SidebarTitle {
+  @apply px-4 pt-4 pb-2;
+}
+
+.SidebarTitle p {
+  @apply text-xs font-medium text-slate-400 uppercase tracking-wider;
+}
+
+
+.Sidebartags {
+  @apply list-none px-2 pb-4;
+  @apply flex-1 overflow-y-auto;
+}
+
+
+.navItem {
+  @apply w-full p-0 m-0;
+
+}
+
+
+.navLink {
+  @apply w-full flex items-center gap-3 rounded-l px-3 py-3;
+  @apply text-slate-700 hover:bg-slate-100 hover:text-slate-900;
+  
+}
+
+
+.navIcon {
+  @apply grid h-9 w-9 place-items-center rounded-xl bg-slate-100 text-slate-700;
+}
+
+.navText {
+  @apply text-sm font-medium;
+}
+
+
+#sidebartags > :last-child {
+  @apply mt-auto pt-2;
+}
+
+
+.navLink.active {
+  @apply bg-violet-100 text-violet-700;
+}
+.navLink.active .navIcon {
+  @apply bg-violet-200/70 text-violet-700;
+}
+
+
+
+.subscriptionCard {
+  @apply px-4 pb-5 py-9;
+}
+
+.card {
+  @apply rounded-2xl p-4 text-white shadow-sm;
+  background: linear-gradient(180deg, rgba(166, 139, 250, 0.95) 0%, rgba(166, 139, 250, 0.55) 100%);
+}
+
+.subscriptionTitle {
+  @apply font-semibold text-base;
+}
+
+.subscriptionDesc {
+  @apply mt-2 text-sm text-white/90 leading-snug;
+}
+
+
+.subBtn {
+  @apply mt-4 w-full rounded-full bg-white px-4 py-2 text-sm font-semibold;
+  color: #111827; 
+  @apply hover:bg-slate-50 transition;
+}
+
+
+

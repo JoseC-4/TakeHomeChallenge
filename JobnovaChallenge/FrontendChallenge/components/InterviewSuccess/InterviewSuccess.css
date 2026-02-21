@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+.interviewBoost {
+  @apply w-full rounded-2xl p-6;
+  background: #b7ff3c;
+}
+
+.boostHeader {
+  @apply flex items-start gap-3;
+}
+
+.boostIcon {
+  @apply h-10 w-10 rounded-xl bg-black/10;
+  @apply flex items-center justify-center text-xl;
+}
+
+.boostHeaderText {
+  @apply space-y-1;
+}
+
+.boostTitle {
+  @apply text-base font-semibold text-slate-900;
+}
+
+.boostSubtitle {
+  @apply text-sm text-slate-700 leading-relaxed;
+}
+
+
+.boostGrid {
+  @apply mt-5 grid gap-6;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.boostCol {
+  @apply space-y-2;
+}
+
+.boostSectionTitle {
+  @apply text-sm font-semibold text-slate-900;
+}
+
+.boostBody {
+  @apply text-sm text-slate-700 leading-relaxed;
+}
+
+
+.boostFooter {
+  @apply mt-5 flex justify-end;
+}
+
+.boostBtn {
+  @apply rounded-full px-5 py-2 text-sm font-semibold;
+  @apply bg-slate-900 text-white hover:bg-slate-800 transition;
+}
+
+
+@media (max-width: 768px) {
+  .boostGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .boostFooter {
+    @apply justify-start;
+  }
+
+  .boostBtn {
+    @apply w-full;
+  }
+}

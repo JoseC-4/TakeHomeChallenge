@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+
+.navbar {
+  @apply bg-white px-6 py-5 border-b border-slate-200;
+}
+
+.navbarLayout {
+  @apply flex items-center gap-4 ml-4 ;
+}
+
+
+.navTab {
+  @apply flex items-center gap-2 w-fit text-slate-500 text-xs font-medium;
+}
+
+
+a:hover {
+   @apply inline-flex items-center gap-2 rounded-full;
+  @apply px-3 py-0;                 /* space you want */
+  border-color: #A68BFA;
+  background: rgba(166, 139, 250, 0.10);
+}
+  @apply transition;
+  
+
+
+.navTabText {
+  @apply text-slate-500 text-xs font-medium;
+}
+
+
+.tabBadge {
+  @apply inline-flex items-center justify-center h-5 min-w-5 px-1.5 rounded-full;
+  @apply text-[11px] font-semibold bg-lime-400 text-slate-900;
+}
+

@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.jobDetails {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr; 
+  background: white;     
+}
+
+
+.jobdetails-right {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.jobDetails-content {
+ flex: 1;
+  min-height: 0;
+  padding: 12px;
+
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+  align-items: start;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .jobDetails {
+    grid-template-columns: 1fr;
+  }
+
+  .jobDetails > :first-child {
+    display: none;
+  }
+
+ 
+  .jobDetails-content {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    overflow-x: hidden;
+  }
+
+
+  .jobDetails-content > :nth-child(2) {
+    display: none;
+  }
+}
+
+
+.jobDetails-inner {
+  @apply rounded-2xl p-6 shadow-sm;
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff 40%, rgba(166, 139, 250, 0.18) 70%, rgba(166, 139, 250, 0.35) 100%);
+}
+
+.jobDetails-star{
+  @apply mb-3 text-slate-900;
+}
+
+.jobDetails-intro {
+  @apply space-y-2;
+}
+
+.jobDetails-subject{
+    @apply text-base font-semibold text-slate-900;
+}
+
+.jobDetails-body{
+    @apply text-sm text-slate-700 leading-relaxed;
+}
+
+.jobDetails-divider {
+  @apply my-4 border-slate-300/60;
+}
+
+.jobDetails-section{
+    @apply space-y-3;
+}
+
+.jobDetails-subjectIcon{
+    @apply inline-flex align-middle ml-1;
+}
+
+.jobDetails-sectionTitle {
+  @apply text-sm font-semibold text-slate-900;
+}
+
+.jobDetails-bullets{
+     @apply list-disc pl-5 space-y-1 text-sm text-slate-700;
+}
+
+.jobDetails-mockBtn{
+    @apply mt-6 w-full rounded-full px-5 py-3;
+  @apply bg-slate-900 text-white text-sm font-semibold;
+  @apply flex items-center justify-center gap-2;
+  @apply hover:bg-slate-800 transition;
+}
+
+.jobDetails-mockBtnIcon{
+    @apply text-white/90;
+}
+
+
+.jobDetails-topActions {
+  @apply w-full flex items-center justify-between gap-3;
+  @apply rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3;
+}
+
+.jobDetails-topLeft {
+  @apply flex items-center gap-3;
+}
+
+.jobDetails-backBtn {
+  @apply h-9 w-9 rounded-full bg-white border border-slate-200;
+  @apply flex items-center justify-center text-slate-700;
+  @apply hover:bg-slate-100 transition;
+}
+
+.jobDetails-pill {
+  @apply px-3 py-1 rounded-full text-xs font-semibold;
+  background: rgba(166, 139, 250, 0.14);
+  color: #6d52f5;
+}
+
+.jobDetails-topRight {
+  @apply flex items-center gap-2;
+}
+
+.jobDetails-iconBtn {
+  @apply h-9 w-9 rounded-full bg-white border border-slate-200;
+  @apply flex items-center justify-center text-slate-600;
+  @apply hover:bg-slate-100 hover:text-slate-900 transition;
+}
+
+
+.jobDetails-applyNow {
+  @apply h-9 rounded-full px-4 text-xs font-semibold;
+  @apply bg-slate-900 text-white;
+  @apply flex items-center gap-2;
+  @apply hover:bg-slate-800 transition;
+}
+
+.jobDetails-applyArrow {
+  @apply text-white/90;
+}
+
+.jobDescription{
+  @apply m-5 px-5;
+}
+
+.jobQualifications{
+  @apply px-6
+}
+
+.qualificationSection{
+  @apply m-5
+}
+
+@media (max-width: 640px) {
+  .jobDetails-topActions {
+    @apply flex-col items-stretch gap-3;
+  }
+
+  .jobDetails-topRight {
+    @apply justify-between;
+  }
+
+  .jobDetails-applyNow {
+    @apply w-full justify-center;
+  }
+}

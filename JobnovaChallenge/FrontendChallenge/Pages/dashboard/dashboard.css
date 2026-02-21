@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.dashboard {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr; 
+  background: white;     
+}
+
+
+.dashboard-right {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
+.content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 12px;
+
+  display: grid;
+  grid-template-columns: 1fr 360px; 
+  gap: 24px;
+  align-items: start;
+  overflow: scroll;
+}
+
+
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+
+  .dashboard > :first-child {
+    display: none;
+  }
+
+  .content {
+    padding: 16px;
+  }
+}
+
+
+.topbar {
+  @apply flex items-center gap-3 mb-4;
+}
+
+
+.topbarMainBtn {
+  @apply flex-1 flex items-center justify-center gap-2;
+  @apply h-10 rounded-full text-sm font-medium text-white;
+  background: #A68BFA;
+  @apply hover:opacity-95 transition;
+}
+
+
+.topbarFilterBtn {
+  @apply flex items-center gap-2 h-10 rounded-full px-4;
+  @apply bg-white border border-slate-200 text-sm font-medium text-slate-900;
+  @apply hover:bg-slate-50 transition;
+}
+
+.topbarIcon,
+.topbarSearchIcon {
+  @apply text-white/95;
+}
+
+.topbarSearchIcon {
+  @apply text-slate-500;
+}
+
+
+.rightContainer {
+  @apply w-full;
+}
+
+.rightInner {
+  @apply rounded-2xl p-6 shadow-sm;
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff 40%, rgba(166, 139, 250, 0.18) 70%, rgba(166, 139, 250, 0.35) 100%);
+}
+
+.star {
+  @apply mb-3 text-slate-900;
+}
+
+.textContainer1 {
+  @apply space-y-2;
+}
+
+.subject {
+  @apply text-base font-semibold text-slate-900;
+}
+
+.bodyText {
+  @apply text-sm text-slate-700 leading-relaxed;
+}
+
+.rightDivider {
+  @apply my-4 border-slate-300/60;
+}
+
+.textContainer2 {
+  @apply space-y-3;
+}
+
+.subjectIcon {
+  @apply inline-flex align-middle ml-1;
+}
+
+.sectionTitle {
+  @apply text-sm font-semibold text-slate-900;
+}
+
+.bullets {
+  @apply list-disc pl-5 space-y-1 text-sm text-slate-700;
+}
+
+
+.mockBtn {
+  @apply mt-6 w-full rounded-full px-5 py-3;
+  @apply bg-slate-900 text-white text-sm font-semibold;
+  @apply flex items-center justify-center gap-2;
+  @apply hover:bg-slate-800 transition;
+}
+
+.mockBtnIcon {
+  @apply text-white/90;
+}
+
+@media (max-width: 768px) {
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard > :first-child {
+    display: none;
+  }
+
+
+  .content {
+    padding: 16px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .content > :nth-child(2) {
+    display: none;
+  }
+}
